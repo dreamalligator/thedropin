@@ -25,7 +25,7 @@ usage:
 
 """
 
-from pelican_plugin_template.release import update_version_and_tag_for_release
+from thedropin.release import update_version_and_tag_for_release
 
 if __name__ == '__main__':
     update_version_and_tag_for_release()

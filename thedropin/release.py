@@ -8,7 +8,7 @@ def update_version(version_file, version_str):
     """update the version file."""
 
     prefixed_warning = """\"\"\"!!!AUTOMATICALLY GENERATED!!! DO NOT EDIT.
-see root pelican_plugin_template/release.py.\"\"\"\n"""
+see root thedropin/release.py.\"\"\"\n"""
 
     version_doc = f'{prefixed_warning}__version__ = "{version_str}"\n'
 
@@ -43,7 +43,7 @@ enter new version: '''
         version_error()
 
     # dynamically getting module dir, to make it easier on anyone forking the
-    # project. equivalent to pelican_plugin_template.
+    # project. equivalent to thedropin.
     module_name = os.path.split(os.getcwd())[-1]
     update_version(f'{module_name}/version.py', new_version)
 

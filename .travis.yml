@@ -7,7 +7,7 @@ install:
 - pip install pipenv
 - pipenv install --dev
 script:
-- python -m pytest --cov=pelican_plugin_template
+- python -m pytest --cov=thedropin
 - pylint **/*.py
 after_success:
 - codecov

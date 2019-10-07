@@ -2,14 +2,14 @@
 Pelican Plugin Template
 =======================
 
-.. image:: https://travis-ci.org/nebulousdog/pelican_plugin_template.svg?branch=master
-   :target: https://travis-ci.org/nebulousdog/pelican_plugin_template
+.. image:: https://travis-ci.org/nebulousdog/thedropin.svg?branch=master
+   :target: https://travis-ci.org/nebulousdog/thedropin
    :alt: travis-link
-.. image:: https://codecov.io/gh/nebulousdog/pelican_plugin_template/branch/master/graph/badge.svg
-   :target: https://codecov.io/gh/nebulousdog/pelican_plugin_template
+.. image:: https://codecov.io/gh/nebulousdog/thedropin/branch/master/graph/badge.svg
+   :target: https://codecov.io/gh/nebulousdog/thedropin
    :alt: codecov-link
-.. image:: https://img.shields.io/pypi/v/pelican_plugin_template.svg
-   :target: https://pypi.org/project/pelican_plugin_template/
+.. image:: https://img.shields.io/pypi/v/thedropin.svg
+   :target: https://pypi.org/project/thedropin/
    :alt: pypi-link
 
 These are the bare minimum yet possibly over-explained steps for creating a Pelican plugin.
@@ -18,12 +18,12 @@ These are the bare minimum yet possibly over-explained steps for creating a Peli
 Steps
 *****
 
-Please let us know in an `issue <https://github.com/nebulousdog/pelican_plugin_template/issues>`_ if we forgot anything!
+Please let us know in an `issue <https://github.com/nebulousdog/thedropin/issues>`_ if we forgot anything!
 
 Copy Plugin Base
 ================
 
-1. Fork `pelican_plugin_template <https://github.com/nebulousdog/pelican_plugin_template>`_.
+1. Fork `thedropin <https://github.com/nebulousdog/thedropin>`_.
 2. Change all dir names and references to this project's name[1]_.
 
 .. [1] Python project names are typically short and lower-cased. If you make a single-word project, congrats, you never have to worry about inconsistent casing between projects. If you absolutely must use spacing, use underscores for project names, directories, and filenames.
@@ -83,7 +83,7 @@ Optionally, you can do some checks on your distribution before attempting an off
 
 4. Also `register <https://pypi.org/account/register/>`_ on TestPyPI if you intend to test your distribution before making it official.
 5. ``twine check dist/*`` Check the distribution you made in step 2.
-6. ``twine upload --repository testpypi dist/*`` Run a test of the upload. Preview at https://test.pypi.org/project/pelican_plugin_template.
+6. ``twine upload --repository testpypi dist/*`` Run a test of the upload. Preview at https://test.pypi.org/project/thedropin.
 
 Back to the official upload steps..
 
