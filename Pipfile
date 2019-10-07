@@ -1,0 +1,25 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+twine = "*"
+pytest = "*"
+pytest-cov = "*"
+codecov = "*"
+pylint = "*"
+pelican = "*"
+readme-renderer = "*"
+
+[packages]
+
+[requires]
+python_version = "3.7"
+
+[scripts]
+tests = "python -m pytest --cov=pelican_plugin_template"
+lints = "pylint pelican_plugin_template tests release.py setup.py"
+dist_create = "python setup.py sdist bdist_wheel"
+dist_check = "twine check dist/*"
+twine_test = "twine upload --repository testpypi dist/*"

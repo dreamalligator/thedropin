@@ -1,0 +1,21 @@
+language: python
+python:
+- '3.6'
+- '3.7'
+dist: xenial
+install:
+- pip install pipenv
+- pipenv install --dev
+script:
+- python -m pytest --cov=pelican_plugin_template
+- pylint **/*.py
+after_success:
+- codecov
+deploy:
+- provider: pypi
+  user: digitalvapor
+  skip_cleanup: true
+  password:
+    secure: "QVMBMKW/NvirCkSdBBi3/p9LA15GBqkfKVSW+OaOf1BhlQCs3PMORZonZ2RjZnSAbGrx8aSQDi6xazyRgat1PSG7WiWW82InlcSadoHzeH9GiI8wqcMh08CCpdKIgfE6waFSVLPYGXDQVTiKw2zRvJi2SVBnuZcmbCy6ddKh1++nEWKt0O6pkcB1YLG4VbbNokjWbH8qGbVlnIPSeMqQtr4sTQkDXXPuPTUTREtVJUvqSR64fyj0zyYcUTh8OXxdPuDBmHLfkpjMEPMg2ny8929MqYelJu5+VZNPanKbeDqBNO2iiyF/XpU1jRFSYqZIa5wa29h0+6ZoiK0L7wxNlyz25GkA3MdYc6ybAS/GUfQzIjtv1c0nrS+you/t8eJ5D4CCBRssoog4CM0tZWW+NKV2gslwQOogAQw99OXCkaAvZIdlgBoo9cliPYLYyv4ZqzFtk6witGb2j39GbQzUXIjpwBAS0qa1bVFkrnRn7zAbuX9GDxERhpcnLIlt9P2BTNoFScA8iWhMQ9RcX68XETx7BGzSKwflCL9FYxaI8EdvbfTQWhp8sgoTxkt7sDRU5dd3P8MEQtwnyM/e+VAYlaBDy3WQuML6dKGfy3HlnkLbLXgZDUkPePED8NmoUzppM3FBkORaKiO+pks9OI2VGBnDRzgdgDEN+ohgGAPSBl4="
+  on:
+    tags: true
