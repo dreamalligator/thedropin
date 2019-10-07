@@ -1,0 +1,13 @@
+todo.md
+
+__pycache__
+*.pyc
+
+# test cov caches
+.coverage
+.pytest_cache
+
+# pypi, twine, and distribution
+build
+dist
+*.egg-info
