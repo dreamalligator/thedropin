@@ -51,8 +51,8 @@ enter new version: '''
 
     os.system('git add -A')
     os.system(f'git commit -m "release v{new_version}"')
-    os.system('git push')
-    os.system(f'git tag {new_version}')
+    # must use annotated tags if using --follow-tags
+    os.system(f'git tag -a {new_version} -m "v{new_version}"')
     os.system('git push --follow-tags')
 
     print('tags and commits pushed.\n')
