@@ -1,0 +1,22 @@
+language: python
+python:
+- '3.6'
+- '3.7'
+dist: xenial
+install:
+- pip install pipenv
+- pipenv install --dev
+script:
+- python -m pytest --cov=thedropin
+- pylint **/*.py
+after_success:
+- codecov
+deploy:
+- provider: pypi
+  edge: true
+  skip_cleanup: true
+  on:
+    tags: true
+  user: "__token__"
+  password:
+    secure: "b9RcfsPaT+7bsxZ9ZB2RQmAg7vgPGwD9FvnBKWTKQdkLkWXkuOBirvGE1tOknxw1BsC/i2mtWahfLhezka/zUlaqrOOOujrRCdmdzLK/hwfMu0rt7pRoAh8ftZO2Ys0qCZRn4cMIKNQz3HTRI9izRC6HqGlR40iNkKbmADAdzcz59N5vSsn9P4GmoByNKhJiR6V0sn6+9WodgLp8n8H9da0xtVBgxpkEc/i5FExk8wP3NFV3MIdy0NMYl+u+WEMJ+fwzMz9rQhs2HMD89dJUZD3ADAeikKYGc5PJReD4o08dYzbL7O12AULq75UcsiGmxwS1MG0rsCMBq9rOIOd9C4Z2ewZDSBqIxthWSDwY5FpFd/X51EwvySi6NoBHFs/rlr9iz/dPyV6osiOK71t6Bd3OtLQR1cEZUS25tWJfqU7Y02DDmsQBaMLE/hY8KgwxIcMOxGwvsOSht2F2+aPliwnlCyyUeiq0QpvOSnVLeMR6HLgLYsfFdMtLDA75E8kFnxuVJVx1WVcYgnGGR4pFKxEAsis0sD5oJ0Nev6OfsIAA2tOpFHdPl6gsMj96k6+ycL/hxz6OMEhY8xm6xg5kT0CnG5squXoHUvVvIFZo9XnZ/1wHfyYK25oUT4v3wPl3lqvbe2anpdcUdqg3hZofizTDA7ngDcnVGVmXCDXr3LE="
