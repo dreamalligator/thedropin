@@ -52,18 +52,14 @@ enter new version: '''
     os.system('git add -A')
     os.system(f'git commit -m "release v{new_version}"')
     os.system('git push')
-
     os.system(f'git tag {new_version}')
-    os.system('git push --tags')
+    os.system('git push --follow-tags')
 
-    print('tags pushed.\n')
+    print('tags and commits pushed.\n')
 
-    username = input('enter your github username: ')
-
-    print(
-        f'''after CI runs at https://travis-ci.org/{username}/{module_name},
+    print(f'''after CI runs at https://travis-ci.org/nebulousdog/{module_name},
 find new releases at all the following locations:
-* Github Releases: https://github.com/{username}/{module_name}/releases
+* Github Releases: https://github.com/nebulousdog/{module_name}/releases
 * PyPI: https://pypi.org/project/{module_name}/
-* Github Pages: https://{username}.github.io/{module_name}/
+* Github Pages: https://nebulousdog.github.io/{module_name}/
 ''')

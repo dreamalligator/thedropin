@@ -1,6 +1,6 @@
-=======================
-Pelican Plugin Template
-=======================
+==========================================
+🛹 The Drop In - a Pelican Plugin Template
+==========================================
 
 .. image:: https://travis-ci.org/nebulousdog/thedropin.svg?branch=master
    :target: https://travis-ci.org/nebulousdog/thedropin
@@ -73,32 +73,35 @@ This is probably the hardest part, and is why I'd wager there are so few Pelican
 First Time
 """"""""""
 
-Your first time uploading a project to PyPI requires registration via `Twine <https://github.com/pypa/twine>`_.
+Your first time uploading a project to PyPI requires using `Twine <https://github.com/pypa/twine>`_. All of the below commands can be found in the `Pipfile <https://github.com/nebulousdog/thedropin/blob/master/Pipfile>`_ ``[scripts]`` section for your convenience.
 
 1. ``pipenv shell`` Enter your dev environment where ``twine`` will be accessible.
 2. ``python setup.py sdist bdist_wheel`` Create a normal distribution.
 3. `Register <https://pypi.org/account/register/>`_ on PyPI.
+4. Think hard on your project name once more before uploading. Short lowercase 1 word names are best.
 
 Optionally, you can do some checks on your distribution before attempting an official upload.
 
-4. Also `register <https://pypi.org/account/register/>`_ on TestPyPI if you intend to test your distribution before making it official.
-5. ``twine check dist/*`` Check the distribution you made in step 2.
-6. ``twine upload --repository testpypi dist/*`` Run a test of the upload. Preview at https://test.pypi.org/project/thedropin.
+5. Also `register <https://pypi.org/account/register/>`_ on TestPyPI if you intend to test your distribution before making it official.
+6. ``twine check dist/*`` Check the distribution you made in the second step.
+7. ``twine upload --repository testpypi dist/*`` Run a test of the upload. Preview at https://test.pypi.org/project/thedropin.
 
 Back to the official upload steps..
 
-(TODO: going to rename the project before uploading to PyPI)
+8. ``twine upload dist/*`` Upload your project to PyPI.
 
-7. (TODO: left off here)
+Continue below before you're tired!
 
 Automated Release to PyPI
 """""""""""""""""""""""""
 
-(TODO: left off here)
+1. Visit https://pypi.org/manage/account/token/ to get your API token.
+2. Create a project-scoped token.
+3. ``gem install travis`` Install the Travis CLI.
+4. ``travis encrypt your-api-token -x deploy.password`` Override the token in this repo.
+5. ``python ./release.py`` Save your changes and bump the version.
 
-After you've found your groove with this; Give yourself a pat on the back. Job well done.
-
-You wont be needing Twine any more. Please feel free to uninstall with ``pipenv uninstall twine``.
+Try bumping the version and tags again using the release script, and push to Github. After you've found your groove with this; Give yourself a pat on the back. Job well done.
 
 **********
 References
