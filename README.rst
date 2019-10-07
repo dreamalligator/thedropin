@@ -2,8 +2,8 @@
 🛹 The Drop In - a Pelican Plugin Template
 ==========================================
 
-.. image:: https://travis-ci.org/nebulousdog/thedropin.svg?branch=master
-   :target: https://travis-ci.org/nebulousdog/thedropin
+.. image:: https://travis-ci.com/nebulousdog/thedropin.svg?branch=master
+   :target: https://travis-ci.com/nebulousdog/thedropin
    :alt: travis-link
 .. image:: https://codecov.io/gh/nebulousdog/thedropin/branch/master/graph/badge.svg
    :target: https://codecov.io/gh/nebulousdog/thedropin
