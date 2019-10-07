@@ -1,6 +1,7 @@
 todo.md
 
 __pycache__
+*.pyc
 
 # test cov caches
 .coverage
