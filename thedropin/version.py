@@ -1,3 +1,3 @@
 """!!!AUTOMATICALLY GENERATED!!! DO NOT EDIT.
 see root thedropin/release.py."""
-__version__ = "0.0.8"
+__version__ = "0.0.11"
