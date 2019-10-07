@@ -1,6 +1,6 @@
-=======================
-Pelican Plugin Template
-=======================
+==========================================
+🛹 The Drop In - a Pelican Plugin Template
+==========================================
 
 .. image:: https://travis-ci.org/nebulousdog/thedropin.svg?branch=master
    :target: https://travis-ci.org/nebulousdog/thedropin
@@ -83,7 +83,7 @@ Your first time uploading a project to PyPI requires using `Twine <https://githu
 Optionally, you can do some checks on your distribution before attempting an official upload.
 
 5. Also `register <https://pypi.org/account/register/>`_ on TestPyPI if you intend to test your distribution before making it official.
-6. ``twine check dist/*`` Check the distribution you made in step 2.
+6. ``twine check dist/*`` Check the distribution you made in the second step.
 7. ``twine upload --repository testpypi dist/*`` Run a test of the upload. Preview at https://test.pypi.org/project/thedropin.
 
 Back to the official upload steps..
@@ -98,8 +98,8 @@ Automated Release to PyPI
 1. Visit https://pypi.org/manage/account/token/ to get your API token.
 2. Create a project-scoped token.
 3. ``gem install travis`` Install the Travis CLI.
-3. ``travis encrypt your-api-token -x deploy.password`` Override the token in this repo.
-4. ``python ./release.py`` Safe your changes and bump the version.
+4. ``travis encrypt your-api-token -x deploy.password`` Override the token in this repo.
+5. ``python ./release.py`` Save your changes and bump the version.
 
 Try bumping the version and tags again using the release script, and push to Github. After you've found your groove with this; Give yourself a pat on the back. Job well done.
 
