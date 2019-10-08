@@ -66,7 +66,7 @@ See `Contributing a plugin <https://github.com/getpelican/pelican-plugins/blob/m
 Publishing to PyPI
 ^^^^^^^^^^^^^^^^^^
 
-This is probably the hardest part, and is why I'd wager there are so few Pelican projects registered on PyPI[2]_. If you begin with the manual steps, I recommend migrating over to an automated way as soon as possible.
+This is probably the hardest part, and is why I'd wager there are so few Pelican projects registered on PyPI[2]_. Begin with the manual steps. Afterwards, add support for the automated steps as soon as possible while everything is fresh in your head.
 
 .. [2] This is based on the following three `classifier <https://pypi.org/classifiers/>`_ searches. At the time of writing these are the tallies, with possible overlap between them; `Framework :: Pelican <https://pypi.org/search/?q=&o=&c=Framework+%3A%3A+Pelican>`_ (20 projects) + `Framework :: Pelican :: Plugins <https://pypi.org/search/?c=Framework+%3A%3A+Pelican+%3A%3A+Plugins>`_ (12 projects) + `Framework :: Pelican :: Themes <https://pypi.org/search/?c=Framework+%3A%3A+Pelican+%3A%3A+Themes>`_ (5 projects) = 37.
 
@@ -102,7 +102,7 @@ Automated Release to PyPI
 5. ``travis encrypt "your-api-token" -x deploy.password`` Override the token in this repo. Travis is migrating to Travis travis-ci.com. If you have opted into the beta, use the ``--com`` when encrypting the PyPI token.
 6. ``python ./release.py`` Save your changes and bump the version.
 
-Try bumping the version and tags again using the release script, and push to Github. After you've found your groove with this; Give yourself a pat on the back. Job well done.
+Try bumping the version and tags again using the release script. After you've found your groove with this, give yourself a pat on the back. Job well done!
 
 **********
 References

@@ -14,9 +14,6 @@ readme-renderer = "*"
 
 [packages]
 
-[requires]
-python_version = "3.7"
-
 [scripts]
 tests = "python -m pytest --cov=thedropin"
 lints = "pylint thedropin tests release.py setup.py"
