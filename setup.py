@@ -18,6 +18,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     license='MIT',
     classifiers=[
+        'Development Status :: 5 - Production/Stable',
         'Framework :: Pelican :: Plugins',
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',
