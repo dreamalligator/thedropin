@@ -12,14 +12,12 @@ script:
 after_success:
 - codecov
 deploy:
-- provider: pypi
+  provider: pypi
   edge: true
   skip_cleanup: true
   on:
     tags: true
-    # only release on a single python version. otherwise all permutations are
-    # attempted.
     python: '3.6'
-  user: "__token__"
+  user: __token__
   password:
-    secure: "JTxQ7L0xnH9WvtYXeMQJzXhgKCpnsu8xmNsic8nBfbAqil7j+tu6CopMPHZQLDp1GPthJKLGr4B/LBxppOPeZB4QZXMifr3ntL52yow2wmHpSqy0sw2uIsKw61Xa8SJpAreSlP4UkCxjPIG/fCklkbr6fUILPIyWZbH1Bv9vstwDHoUBtEAFhzyjeixkZPBqP7mg1+RvNClKczW//KVFPyxh8/uo7FjcM6eO8wAh4rl+B3FMPxku08DdSk7nkdkHnI7jAfMVVvWmPP6UnApFaddU9YLZeMoG0ss8a7YSoyKY43JyvXifTnc6fop5tnFonp7AEk4We97aAGOBBlurCV72Vlw+vbsiM6D0YW673ZZ43RhqIc6rHMDV2+uBFFIKOOlMwPBmwjMEb9LlaNUp/O6eFdnKBHYidtVWI3fnsG5HChoIKiYL+27hA+EYj61NM52p3ZBBcH1u8/ZF9aikx4VSHdTRQ3zfM2g6lAaKWtaxx3eqrC/dvlFGugo/boblwiEJzaQntTsjeUzun+k5lDOjtumJWlifY9jFbGPCDIxVAO/DxVBa2zF/uioWQwlMkMvbPIZxBjzoWSm1AH32q3uqecx2Ssk8+hv1bPabogr9PghndSa8av2Gz2PM6zy4/7hJmqgcTUHXGAzp5/FDRreptVnmiNe3yTwOtHuBT1M="
+    secure: JTxQ7L0xnH9WvtYXeMQJzXhgKCpnsu8xmNsic8nBfbAqil7j+tu6CopMPHZQLDp1GPthJKLGr4B/LBxppOPeZB4QZXMifr3ntL52yow2wmHpSqy0sw2uIsKw61Xa8SJpAreSlP4UkCxjPIG/fCklkbr6fUILPIyWZbH1Bv9vstwDHoUBtEAFhzyjeixkZPBqP7mg1+RvNClKczW//KVFPyxh8/uo7FjcM6eO8wAh4rl+B3FMPxku08DdSk7nkdkHnI7jAfMVVvWmPP6UnApFaddU9YLZeMoG0ss8a7YSoyKY43JyvXifTnc6fop5tnFonp7AEk4We97aAGOBBlurCV72Vlw+vbsiM6D0YW673ZZ43RhqIc6rHMDV2+uBFFIKOOlMwPBmwjMEb9LlaNUp/O6eFdnKBHYidtVWI3fnsG5HChoIKiYL+27hA+EYj61NM52p3ZBBcH1u8/ZF9aikx4VSHdTRQ3zfM2g6lAaKWtaxx3eqrC/dvlFGugo/boblwiEJzaQntTsjeUzun+k5lDOjtumJWlifY9jFbGPCDIxVAO/DxVBa2zF/uioWQwlMkMvbPIZxBjzoWSm1AH32q3uqecx2Ssk8+hv1bPabogr9PghndSa8av2Gz2PM6zy4/7hJmqgcTUHXGAzp5/FDRreptVnmiNe3yTwOtHuBT1M=

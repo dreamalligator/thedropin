@@ -98,11 +98,23 @@ Automated Release to PyPI
 1. Visit https://pypi.org/manage/account/token/ to get your API token.
 2. Create a project-scoped token.
 3. ``gem install travis`` Install the Travis CLI.
-4. ``travis login`` Log into the CLI app. Use ``--pro`` if you've opted into the https://travis-ci.com/ beta.
-5. ``travis encrypt "your-api-token" -x deploy.password`` Override the token in this repo. Travis is migrating to Travis travis-ci.com. If you have opted into the beta, use the ``--com`` when encrypting the PyPI token.
+4. ``travis login`` Log into the CLI app. Use ``--com`` if you've opted into the https://travis-ci.com/ beta.
+5. ``travis encrypt -a deploy.password "your-api-token" --com`` Override the token in this repo. Travis is migrating to Travis travis-ci.com.
 6. ``python ./release.py`` Save your changes and bump the version.
 
 Try bumping the version and tags again using the release script. After you've found your groove with this, give yourself a pat on the back. Job well done!
+
+************
+Installation
+************
+
+1. ``pipenv install --dev thedropin``
+2. update your ``pelicanconf.py``'s plugins settings to include the following.
+
+   .. code-block:: python
+
+      import thedropin
+      PLUGINS = [thedropin]
 
 **********
 References
