@@ -108,6 +108,8 @@ Try bumping the version and tags again using the release script. After you've fo
 Installation
 ************
 
+The installation instructions for your new plugin will now be the following.
+
 1. ``pipenv install --dev thedropin``
 2. update your ``pelicanconf.py``'s plugins settings to include the following.
 
@@ -115,6 +117,8 @@ Installation
 
       import thedropin
       PLUGINS = [thedropin]
+
+You can now include ``{{ article.emoji }}`` or ``{{ page.emoji }}`` in your templates. This can be overridden in the article, or page's, metadata. For example, ``:emoji: 🧙``.
 
 **********
 References
