@@ -11,3 +11,4 @@ def add_exciting_metadata(_generator, metadata):
 # signals list: https://docs.getpelican.com/en/latest/plugins.html#list-of-signals
 def register():
     signals.article_generator_context.connect(add_exciting_metadata)
+    signals.page_generator_context.connect(add_exciting_metadata)
