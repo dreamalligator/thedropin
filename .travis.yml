@@ -12,7 +12,7 @@ script:
 after_success:
 - codecov
 deploy:
-  provider: pypi
+- provider: pypi
   edge: true
   skip_cleanup: true
   on:

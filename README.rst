@@ -99,7 +99,7 @@ Automated Release to PyPI
 2. Create a project-scoped token.
 3. ``gem install travis`` Install the Travis CLI.
 4. ``travis login`` Log into the CLI app. Use ``--com`` if you've opted into the https://travis-ci.com/ beta.
-5. ``travis encrypt -a deploy.password "your-api-token" --com`` Override the token in this repo. Travis is migrating to Travis travis-ci.com.
+5. ``travis encrypt "your-api-token" --com`` Override the token in this repo. Travis is migrating to Travis travis-ci.com.
 6. ``python ./release.py`` Save your changes and bump the version.
 
 Try bumping the version and tags again using the release script. After you've found your groove with this, give yourself a pat on the back. Job well done!
